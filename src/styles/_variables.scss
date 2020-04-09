@@ -1,0 +1,21 @@
+/* TYPOGRAPHY */
+
+$base-font-family: "Open-sans", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$impact-font-family: "Ubuntu", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+
+/* COLORS */
+$primary-color: #448AFF;
+$secondary-color: #FF5252;
+
+/* BUTTON */
+$button-font-family: $base-font-family;
+$button-primary-color: $primary-color;
+$button-secondary-color: $secondary-color;
+$button-raised-color: #FFF;
+$button-default-raised-color: #000;
+$button-default-raised-background-color: #FFF;
+$button-disabled-color: #00000042;
+$button-disabled-background-color: #0000001F;
+$button-font-size: 1rem;
+$button-margin: 0.25rem 0.5rem;
+$button-padding: 0.5rem;

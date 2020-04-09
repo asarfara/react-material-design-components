@@ -1,0 +1,81 @@
+@import '../../styles/utilities/ripple.scss';
+
+.button {
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  margin: $button-margin;
+  min-width: 144px;
+  padding: $button-padding;
+  display: inline-block;
+  overflow: hidden;
+  transition: background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1),border .2s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: $button-font-size;
+  line-height: 1.5rem;
+  font-family: $base-font-family;
+  font-weight: 500;
+  box-sizing: border-box;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: .4s cubic-bezier(.4,0,.2,1);
+    will-change: background-color,opacity;
+    content: " ";
+  }
+
+  &:hover {
+    &:before {
+      background-color: currentColor;
+      opacity: .12;
+    }
+  }
+}
+
+.button--primary {
+  color: $button-primary-color;
+}
+
+.button--secondary {
+  color: $button-secondary-color;
+}
+
+.button--raised {
+  background: $button-default-raised-background-color;
+  color: $button-default-raised-color;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  &.button--primary {
+    background: $button-primary-color;
+    color: $button-raised-color;
+  }
+
+  &.button--secondary {
+    background: $button-secondary-color;
+    color: $button-raised-color;
+  }
+}
+
+.button[disabled] {
+  color: $button-disabled-color;
+
+  &:hover {
+    &:before {
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+}
+
+.button--raised[disabled] {
+  background: $button-disabled-background-color;
+  box-shadow: none;
+}

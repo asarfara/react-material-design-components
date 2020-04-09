@@ -1,0 +1,7 @@
+# Browsers that we support
+# http://browserl.ist/?q=%3E+1%25%2C+last+4+versions%2C+last+6+safari+versions%2C+not+IE+%3C%3D+10
+
+> 1%
+last 4 versions
+last 6 safari versions
+not IE <= 10
